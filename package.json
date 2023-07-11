@@ -1,0 +1,41 @@
+{
+  "name": "homebridge-esp8266-soil-moisture-v2",
+  "version": "1.0.0",
+  "description": "Plugin for simulating just Humidity sensor (in this case soil moisture v2) to homekit, on the esp there is just an endpoint to get the humidity from",
+  "main": "dist/accessory.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Koller",
+  "engines": {
+    "homebridge": ">=1.0.0"
+  },
+  "keywords": [
+    "homebridge-humidity-sensor"
+  ],
+  "license": "ISC",
+  "files": [
+    "LICENSE",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/homebridge/homebridge-examples.git"
+  },
+  "bugs": {
+    "url": "https://github.com/homebridge/homebridge-examples/issues"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.7",
+    "homebridge": "^1.6.1",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
